@@ -80,7 +80,7 @@ int main(void) {
 
     // PWM
     PwmOut.Init();
-    PwmOut.SetFrequencyHz(1000);
+    PwmOut.SetFrequencyHz(200);
 
     // Main cycle
     App.ITask();
@@ -105,7 +105,7 @@ void App_t::ITask() {
             if(AdcFirstConv) { AdcFirstConv = false; Adc.StartMeasurement(); }
             else {
                 uint16_t Vrand_adc = Adc.GetResult(ADC_USER_CHNL, Filt);
-//                PwmOut.Set(Vrand_adc);
+                PwmOut.Set(Vrand_adc);
                 Uart.Printf("ADC vaule: %u\r", Vrand_adc);
             } // if not big diff
         } // evt

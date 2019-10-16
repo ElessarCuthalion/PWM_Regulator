@@ -46,7 +46,7 @@
 #define USER_out        { GPIOB, 1, pudPullDown }
 
 // PWM output
-#define PWM_PIN         { GPIOA, 7, TIM3, 2, invNotInverted, omPushPull, 512 }
+#define PWM_PIN         { GPIOA, 7, TIM3, 2, invNotInverted, omPushPull, 2048 }
 
 // UART
 #define UART_GPIO       GPIOA
@@ -89,7 +89,7 @@
 #define ADC_USER_CHNL       9
 #define ADC_USER_PIN        GPIOB, 1
 #define ADC_RAND_CHNL       1
-#define ADC_MEAS_PERIOD_MS  100
+#define ADC_MEAS_PERIOD_MS  250
 
 #define ADC_TEMP_CHNL       16
 #define ADC_VREFINT_CHNL    17  // All 4xx, F072 and L151 devices. Do not change.
