@@ -39,9 +39,6 @@
 // Peripheral power enable
 //#define PWR_EN_PIN      GPIOA, 5, omOpenDrain
 
-// Antenna for Random generation
-#define ADC_RAND_PIN    GPIOA, 1
-
 // Sensors
 #define USER_out        { GPIOB, 1, pudPullDown }
 
@@ -84,12 +81,13 @@
 #if ADC_REQUIRED // ======================= Inner ADC ==========================
 // Clock divider: clock is generated from the APB2
 #define ADC_CLK_DIVIDER     adcDiv2
+#define ADC_MEAS_PERIOD_MS  250
 
 // ADC channels
 #define ADC_USER_CHNL       9
 #define ADC_USER_PIN        GPIOB, 1
 #define ADC_RAND_CHNL       1
-#define ADC_MEAS_PERIOD_MS  250
+#define ADC_RAND_PIN        GPIOA, 1    // Antenna for Random generation
 
 #define ADC_TEMP_CHNL       16
 #define ADC_VREFINT_CHNL    17  // All 4xx, F072 and L151 devices. Do not change.
