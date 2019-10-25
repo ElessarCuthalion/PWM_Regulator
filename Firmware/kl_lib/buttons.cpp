@@ -138,6 +138,9 @@ void ProcessButtons(PinSnsState_t *BtnState, uint32_t Len) {
 #endif
             }
 #endif
+#if BTN_DOUBLE_CLICK
+            else IsDoubleClicking[i] = false;
+#endif
 
 #if BTN_RELEASE // Send evt if not combo
             AddEvtToQueue(beRelease, i);
