@@ -989,7 +989,6 @@ void Clk_t::UpdateFreqValues() {
     APBFreqHz = AHBFreqHz >> tmp;
     // Timer multi
     TimerClkMulti = (tmp == 0)? 1 : 2;
-#ifndef STM32F0XX
     // ==== Update prescaler in System Timer ====
     uint32_t Psc = (SYS_TIM_CLK / OSAL_ST_FREQUENCY) - 1;
     TMR_DISABLE(STM32_ST_TIM);          // Stop counter
@@ -998,7 +997,6 @@ void Clk_t::UpdateFreqValues() {
     TMR_GENERATE_UPD(STM32_ST_TIM);
     STM32_ST_TIM->CNT = Cnt;            // Restore time
     TMR_ENABLE(STM32_ST_TIM);
-#endif
 }
 
 // ==== Common use ====
@@ -1051,7 +1049,7 @@ uint8_t Clk_t::SwitchTo(ClkSrc_t AClkSrc) {
 
 #ifdef RCC_CFGR_SW_HSI48
         case csHSI48:
-            if(EnableHSI48() != OK) return FAILURE;
+            if(EnableHSI48() != retvOk) return retvFail;
             RCC->CFGR = tmp | RCC_CFGR_SW_HSI48;
             return WaitSWS(RCC_CFGR_SWS_HSI48);
             break;
@@ -1080,7 +1078,7 @@ uint8_t Clk_t::SetupPLLDividers(uint8_t HsePreDiv, PllMul_t PllMul) {
 }
 
 void Clk_t::SetupPLLSrc(PllSrc_t Src) {
-    if(Src == pllSrcHSIdiv2) RCC->CFGR &= ~RCC_CFGR_PLLSRC;
+    if(Src == plsHSIdiv2) RCC->CFGR &= ~RCC_CFGR_PLLSRC;
     else RCC->CFGR |= RCC_CFGR_PLLSRC;
 }
 

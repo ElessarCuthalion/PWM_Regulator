@@ -1053,9 +1053,7 @@ static inline void EnterStandby() {
     PWR->CR1 = tmp;
 #else
     PWR->CR = PWR_CR_PDDS;
-    // Command to clear WUF (wakeup flag) and wait two sys clock cycles to allow it be cleared
     PWR->CR |= PWR_CR_CWUF;
-    __NOP(); __NOP();
 #endif
     __WFI();
 }
