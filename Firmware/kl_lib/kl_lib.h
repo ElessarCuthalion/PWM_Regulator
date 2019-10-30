@@ -839,7 +839,7 @@ public:
     void Init() const { PinSetupInput(ISetup.PGpio, ISetup.Pin, ISetup.PullUpDown); }
     void Deinit() const { PinSetupAnalog(ISetup.PGpio, ISetup.Pin); }
     bool IsHi() const { return PinIsHi(ISetup.PGpio, ISetup.Pin); }
-    PinInput_t(const PinInputSetup_t &ASetup) : ISetup(ASetup) {}
+    PinInput_t(GPIO_TypeDef *PGpio, uint16_t Pin, PinPullUpDown_t PullUpDown) : ISetup({PGpio, Pin, PullUpDown}) {}
 };
 
 
@@ -1350,7 +1350,7 @@ enum PllMul_t {
 };
 
 #ifdef STM32F030
-enum PllSrc_t {pllSrcHSIdiv2, pllSrcHSE};
+enum PllSrc_t {plsHSIdiv2, plsHSE};
 enum ClkSrc_t {csHSI=0b00, csHSE=0b01, csPLL=0b10};
 #else
 enum PllSrc_t {plsHSIdiv2=0b00, plsHSIdivPREDIV=0b01, plsHSEdivPREDIV=0b10, plsHSI48divPREDIV=0b11};
