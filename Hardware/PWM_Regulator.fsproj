@@ -5,7 +5,7 @@
 <!--   Version : 2                         -->
 <!--   Program : TopoR Lite 7.0.18707      -->
 <!--   Date    : Monday, November 02, 2020 -->
-<!--   Time    : 18:38                     -->
+<!--   Time    : 21:12                     -->
 <!--***************************************-->
 
 <Project>
@@ -13,7 +13,7 @@
    <GUID>{B4C8EAE9-A636-4EBD-A0C9-7BA74E50F788}</GUID>
    <Documents>
       <Section name="PCB" isExpanded="true">
-         <File path=".\PWM_Regulator.fsx" isopened="0" dateChange="2020-11-02 18:34:34"/>
+         <File path=".\PWM_Regulator.fsx" isopened="1" dateChange="2020-11-02 18:50:54"/>
       </Section>
       <Section name="AutoRouting" isExpanded="false"/>
    </Documents>
