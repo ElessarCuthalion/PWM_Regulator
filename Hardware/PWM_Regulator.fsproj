@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--***************************************-->
+<!--   File    : PWM_Regulator.fsproj      -->
+<!--   Format  : TopoR Project file        -->
+<!--   Version : 2                         -->
+<!--   Program : TopoR Lite 7.0.18707      -->
+<!--   Date    : Monday, November 02, 2020 -->
+<!--   Time    : 18:38                     -->
+<!--***************************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{B4C8EAE9-A636-4EBD-A0C9-7BA74E50F788}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="true">
+         <File path=".\PWM_Regulator.fsx" isopened="0" dateChange="2020-11-02 18:34:34"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="false"/>
+   </Documents>
+   <Import>
+      <Specctra>
+         <Path name="D:\Projects\20.07.13_Ehtele\Hardware\DispenserBoard.dsn"/>
+         <Path name="D:\Projects\20.07.13_Ehtele\Hardware\LedBoard.dsn"/>
+         <Path name="D:\Projects\20.07.13_Ehtele\Hardware\RS-422_connection.dsn"/>
+         <Path name="D:\Projects\20.07.13_Ehtele\Hardware\ControllerPowerBoard.dsn"/>
+         <Path name="D:\Projects\19.10.15_PWM_Regulator\Hardware\PWM_Regulator.dsn"/>
+      </Specctra>
+   </Import>
+</Project>
