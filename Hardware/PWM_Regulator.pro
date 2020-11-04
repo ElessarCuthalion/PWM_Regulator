@@ -1,6 +1,6 @@
-update=02.11.2020 18:36:15
+update=04.11.2020 11:10:22
 version=1
-last_client=kicad
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -26,7 +26,7 @@ version=1
 PageLayoutDescrFile=
 LastNetListRead=PWM_Regulator.net
 CopperLayerCount=2
-BoardThickness=1.6
+BoardThickness=1
 AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
