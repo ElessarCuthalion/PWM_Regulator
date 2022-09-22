@@ -1914,7 +1914,7 @@ $EndComp
 Text Label 2150 6450 0    60   ~ 0
 EN_WKUP
 Text Notes 1450 6050 0    59   ~ 0
-Start for Wkuup btn\n(set to Bottom)
+Start for Wkup btn\n(set to Bottom)
 $Comp
 L Regulators:MCP1700T-xx02E DA1
 U 1 1 62D3B16B
