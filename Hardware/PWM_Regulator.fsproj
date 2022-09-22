@@ -5,7 +5,7 @@
 <!--   Version : 2                            -->
 <!--   Program : TopoR Lite 7.0.18746         -->
 <!--   Date    : Thursday, September 22, 2022 -->
-<!--   Time    : 14:05                        -->
+<!--   Time    : 16:07                        -->
 <!--******************************************-->
 
 <Project>
@@ -13,8 +13,8 @@
    <GUID>{B4C8EAE9-A636-4EBD-A0C9-7BA74E50F788}</GUID>
    <Documents>
       <Section name="PCB" isExpanded="true">
+         <File path=".\GameTimer.fsx" isopened="1" dateChange="2022-09-22 14:05:33"/>
          <File path=".\PWM_Regulator.fsx" isopened="0" dateChange="2020-11-03 17:23:53"/>
-         <File path=".\GameTimer.fsx" isopened="0" dateChange="2022-09-22 14:05:33"/>
       </Section>
       <Section name="AutoRouting" isExpanded="false"/>
    </Documents>
